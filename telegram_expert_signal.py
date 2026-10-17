@@ -346,6 +346,12 @@ async def handler(event):
 async def main():
     await client.start()
     print("Telegram CONNECTED")
+    import zxlicense
+    me = await client.get_me()
+    if not zxlicense.valid(me.id, os.getenv("LICENSE", "")):
+        print(f"\nLICENSE REQUIRED | رقم تيليجرام حقك: {me.id}")
+        print("ارسل هذا الرقم للبائع عشان يعطيك كود، ثم اكتب: bash license.sh الكود")
+        return
     await eo.connect()
     for a in await eo.fetch_assets():
         STEPS[a["id"]] = a.get("expiration_step", 5)
