@@ -1,0 +1,9 @@
+api_expert @ git+https://github.com/A11ksa/API-Expert-Option.git@ad41e00ae60138b9822b3c508a6759967a35816f
+-e git+https://github.com/A11ksa/Expert-Option-API.git@fd1dfd59c1e0fc69b2c2b53c3fa6d5abea2ca8a8#egg=ExpertOptionsToolsV2
+numpy==2.5.3
+pandas==3.0.6
+python-dotenv==1.2.4
+requests==2.34.2
+Telethon==1.45.0
+websocket-client==1.9.2
+websockets==17.1
